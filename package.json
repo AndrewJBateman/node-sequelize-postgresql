@@ -1,0 +1,24 @@
+{
+  "name": "node-sequelize-postgresql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "ajbateman",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
