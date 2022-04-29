@@ -62,17 +62,18 @@
 
 * [Node.js v16](https://nodejs.org/) Javascript runtime using the [Chrome V8 engine](https://v8.dev/)
 * [Express v4](https://www.npmjs.com/package/express) web framework for node
-* [Sequelize v6](https://sequelize.org/) TypeScript and Node.js Object-relational mapping (ORM) for Postgres
+* [Sequelize v6](https://sequelize.org/) TypeScript and Node.js Object-relational mapping (ORM) for Postgres, MySQL, MariaDB, SQLite and SQL Server
 * [Thunder Client](https://www.thunderclient.com/) lightweight REST Client used to test CRUD operations
 * [DBeaver relational database tool](https://dbeaver.com/) used to connect to a PostgreSQL database
-* [DB Diagram](https://dbdiagram.io/) used to create the database overview drawing
+* [DB Diagram](https://dbdiagram.io/) used to create the Database Overview
+* [Structure-codes CLI](https://github.com/structure-codes/cli) used to create the Project Structure
 * [morgan v1](https://www.npmjs.com/package/morgan) HTTP request logger middleware for node.js
 
 ## :floppy_disk: Setup
 
 * Assuming you have PostgreSQL database installed, install DBeaver and connect to your PostgreSQL database using DBeaver
 * `npm i` to install dependencies
-* Create `.env` and add database credentials - see `.env.example`
+* Create `.env` and add database credentials - see `.example.env`
 * `npm run dev` runs app in the development mode with auto-restart.
 * Open [http://localhost:3000/projects](http://localhost:3000/projects) to see projects list in browser
 * Open [http://localhost:3000/workpackages](http://localhost:3000/workpackages) to see workpackages list in browser
