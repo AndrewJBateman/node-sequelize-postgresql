@@ -1,6 +1,6 @@
 # :zap: Node Sequelize PostgreSQL
 
-* Node.js + Express used with Sequelize to perform Create, Read, Update & Delete (CRUD) operations on linked data tables in a PostgreSQL database
+* Node.js + Express used with Sequelize Object-Relational Mapping (ORM) to perform promise-based Create, Read, Update & Delete (CRUD) operations on linked data tables in a PostgreSQL database
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/node-sequelize-postgresql?style=plastic)
@@ -27,15 +27,15 @@
 ## :books: General info
 
 * SQL database data based on Sequelize Project and Workpackage models
-* Node.js project structure best practise observed with separate routes & controller code
-* The use of Projects and Workpackages is based on my Engineering experience in Norway where all Maintenance and Modifications are explained in engineering workpackages that all have a unique workpackage id number and are tied to a project using the project id number
+* Node.js project structure best practises observed with separate routes & controller code
+* The use of Projects and Workpackages is based on my Engineering experience in Norway where all Maintenance and Modification projects are documented in engineering workpackages that all have a unique workpackage id number and are tied to a project using the project id number
 
 * Database Overview:
-
 ![Overview](./imgs/database_overview.png)
 
 ## :camera: Screenshots
 
+![Image](./imgs/thunder.png)
 ![Image](./imgs/node.png)
 
 ## :signal_strength: Technologies
@@ -55,46 +55,54 @@
 * `npm run dev` runs app in the development mode with auto-restart.
 * Open [http://localhost:3000/projects](http://localhost:3000/projects) to see projects list in browser
 * Open [http://localhost:3000/workpackages](http://localhost:3000/workpackages) to see workpackages list in browser
-* CRUD operations can be performed using Thunder Client
+* CRUD operations can be performed using the Thunder Client VS Code extension
 
 ## :wrench: Testing
 
-* tba
+* All CRUD functions tested using Thunder Client
 
 ## :computer: Code Examples
 
-* Sequelize model using Sequalize.define
+* Workpackage model using Sequelize.define
 
-```typescript
-const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
-
-const User = sequelize.define('User', {
-  // Model attributes are defined here
-  firstName: {
-    type: DataTypes.STRING,
-    allowNull: false
+```javascript
+export const Workpackage = sequelize.define(
+  "workpackages",
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    title: {
+      type: DataTypes.STRING,
+    },
+    description: {
+      type: DataTypes.STRING,
+    },
+    completed: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    checked: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
   },
-  lastName: {
-    type: DataTypes.STRING
-    // allowNull defaults to true
+  {
+    timestamps: false,
   }
-}, {
-  // Other model options go here
-});
-
-// `sequelize.define` also returns the model
-console.log(User === sequelize.models.User); // true
+);
 ```
 
 ## :cool: Features
 
-* tba
+* Sequelize is easy to learn and the synchronisation function is useful
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working
-* To-Do: Fix link between Projects and Workpackages
+* To-Do: Optional: add frontend cards or table to display data - could use EJS
 
 ## :clap: Inspiration
 
