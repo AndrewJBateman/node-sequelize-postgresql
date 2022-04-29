@@ -12,7 +12,7 @@ const router = Router();
 
 router.get("/workpackages", getWorkpackages);
 router.post("/workpackages", createWorkpackage);
-router.put("/workpackage/:id", updateWorkpackage);
+router.put("/workpackages/:id", updateWorkpackage);
 router.delete("/workpackages/:id", deleteWorkpackage);
 router.get("/workpackages/:id", getWorkpackage);
 

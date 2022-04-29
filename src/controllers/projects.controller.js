@@ -1,9 +1,10 @@
 import { Project } from "../models/Project.js";
+import {Workpackage} from "../models/Workpackage.js";
 
 export const getProjects = async (req, res) => {
   try {
     const projects = await Project.findAll({
-      attibutes: ["id", "title", "description"],
+      attributes: ["id", "title", "description"],
     });
     res.json(projects);
   } catch (error) {}
@@ -74,9 +75,10 @@ export const deleteProject = async (req, res) => {
 
 export const getProjectWorkpackages = async (req, res) => {
   const { id } = req.params;
+  console.log('project id is: ', id)
   try {
     const workpackages = await Workpackage.findAll({
-      attibutes: [
+      attributes: [
         "id",
         "projectId",
         "title",
@@ -86,6 +88,7 @@ export const getProjectWorkpackages = async (req, res) => {
       ],
       where: { projectId: id },
     });
+    console.log('workpackages; ', workpackages)
     res.json(workpackages);
   } catch (error) {
     return res.status(500).json({ message: error.message });
