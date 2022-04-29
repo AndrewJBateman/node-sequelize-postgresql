@@ -30,13 +30,33 @@
 * Node.js project structure best practises observed with separate routes & controller code
 * The use of Projects and Workpackages is based on my Engineering experience in Norway where all Maintenance and Modification projects are documented in engineering workpackages that all have a unique workpackage id number and are tied to a project using the project id number
 
+* Project Structure:
+
+```bash
+├── package.json
+└── src
+  ├── app.js
+  ├── controllers
+  │  ├── projects.controller.js
+  │  └── workpackages.controller.js
+  ├── db
+  │  └── database.js
+  ├── index.js
+  ├── models
+  │  ├── Project.js
+  │  └── Workpackage.js
+  └── routes
+    ├── projects.routes.js
+    └── workpackages.routes.js
+```
+
 * Database Overview:
+
 ![Overview](./imgs/database_overview.png)
 
 ## :camera: Screenshots
 
 ![Image](./imgs/thunder.png)
-![Image](./imgs/node.png)
 
 ## :signal_strength: Technologies
 
@@ -46,6 +66,7 @@
 * [Thunder Client](https://www.thunderclient.com/) lightweight REST Client used to test CRUD operations
 * [DBeaver relational database tool](https://dbeaver.com/) used to connect to a PostgreSQL database
 * [DB Diagram](https://dbdiagram.io/) used to create the database overview drawing
+* [morgan v1](https://www.npmjs.com/package/morgan) HTTP request logger middleware for node.js
 
 ## :floppy_disk: Setup
 
@@ -56,6 +77,7 @@
 * Open [http://localhost:3000/projects](http://localhost:3000/projects) to see projects list in browser
 * Open [http://localhost:3000/workpackages](http://localhost:3000/workpackages) to see workpackages list in browser
 * CRUD operations can be performed using the Thunder Client VS Code extension
+* PostgreSQL console can be used to work with database: `\c projects` to connect to projects database, `\dt` to list tables, `SELECT * FROM projects;` to see projects table
 
 ## :wrench: Testing
 
@@ -63,7 +85,7 @@
 
 ## :computer: Code Examples
 
-* Workpackage model using Sequelize.define
+* `models/Workpackage.js` Workpackage model using Sequelize.define
 
 ```javascript
 export const Workpackage = sequelize.define(
@@ -97,7 +119,7 @@ export const Workpackage = sequelize.define(
 
 ## :cool: Features
 
-* Sequelize is easy to learn and the synchronisation function is useful
+* Sequelize is easy to learn and the database synchronisation function is useful
 
 ## :clipboard: Status & To-Do List
 
