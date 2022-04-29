@@ -1,13 +1,20 @@
-import {Router} from "express"
-import { getProjects, createProject, updateProject, deleteProject, getProject, getProjectWorkpackages} from "../controllers/projects.controller.js"
+import { Router } from "express";
+import {
+  getProjects,
+  createProject,
+  updateProject,
+  deleteProject,
+  getProject,
+  getProjectWorkpackages,
+} from "../controllers/projects.controller.js";
 
-const router = Router()
+const router = Router();
 
-router.get("/projects", getProjects)
-router.post("/projects", createProject)
-router.put("/projects/:id", updateProject)
-router.delete("/projects/:id", deleteProject)
-router.get("/projects/:id", getProject)
-router.get("/projects/:id/workpackages", getProjectWorkpackages)
+router.get("/", getProjects);
+router.post("/", createProject);
+router.put("/:id", updateProject);
+router.delete("/:id", deleteProject);
+router.get("/:id", getProject);
+router.get("/:id/workpackages", getProjectWorkpackages);
 
-export default router
+export default router;

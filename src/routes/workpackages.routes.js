@@ -10,10 +10,10 @@ import {
 
 const router = Router();
 
-router.get("/workpackages", getWorkpackages);
-router.post("/workpackages", createWorkpackage);
-router.put("/workpackages/:id", updateWorkpackage);
-router.delete("/workpackages/:id", deleteWorkpackage);
-router.get("/workpackages/:id", getWorkpackage);
+router.get("/", getWorkpackages);
+router.post("/", createWorkpackage);
+router.put("/:id", updateWorkpackage);
+router.delete("/:id", deleteWorkpackage);
+router.get("/:id", getWorkpackage);
 
 export default router;
