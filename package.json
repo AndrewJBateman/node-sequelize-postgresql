@@ -15,7 +15,7 @@
     "morgan": "^1.10.0",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.25.3"
+    "sequelize": "^6.27.0"
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
