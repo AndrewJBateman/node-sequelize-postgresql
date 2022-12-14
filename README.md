@@ -65,6 +65,7 @@
 * [Sequelize v6](https://sequelize.org/) TypeScript and Node.js Object-relational mapping (ORM) for Postgres, MySQL, MariaDB, SQLite and SQL Server
 * [Thunder Client](https://www.thunderclient.com/) lightweight REST Client used to test CRUD operations
 * [DBeaver relational database tool](https://dbeaver.com/) used to connect to a PostgreSQL database
+* [PostgreSQL v14](https://www.postgresql.org/) object-relational database
 * [DB Diagram](https://dbdiagram.io/) used to create the Database Overview
 * [Structure-codes CLI](https://github.com/structure-codes/cli) used to create the Project Structure
 * [morgan v1](https://www.npmjs.com/package/morgan) HTTP request logger middleware for node.js

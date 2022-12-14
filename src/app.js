@@ -3,7 +3,7 @@ import morgan from "morgan";
 
 // Import routes
 import projectsRoutes from "./routes/projects.routes.js";
-import workpackagesRoutes from "./routes/workpackages.routes.js"
+import workpackagesRoutes from "./routes/workpackages.routes.js";
 
 const app = express();
 
